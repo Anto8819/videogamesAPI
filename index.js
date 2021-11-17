@@ -16,18 +16,15 @@
 //         \  \ `_.   \_ __\ /__ _/   .-` /  /
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
-//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-const server = require('./src/app.js'); //import of express web server
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const server = require("./src/app.js"); //import of express web server
 
-const { conn } = require('./src/db.js'); //import of sequelice db
-
+const { conn } = require("./src/db.js"); //import of sequelice db
+const port = process.env.PORT || 3001;
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, async () => {
-    console.log('%s listening at 3001');
+  server.listen(port, async () => {
+    console.log("%s listening at 3001");
   });
 });
-
-
-
