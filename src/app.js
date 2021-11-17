@@ -9,7 +9,7 @@ require("./db.js"); //import db creates in sequelice
 
 const server = express(); //express is a funcion so we need to call it into a variable to use it
 
-server.set("PORT", process.env.PORT || 3001);
+// server.set("PORT", process.env.PORT || 3001);
 
 server.name = "API";
 
