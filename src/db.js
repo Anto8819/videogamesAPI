@@ -11,16 +11,16 @@ const { mapGenresApiDB } = require("./controller/genreController");
 const { HK_USER, HK_PASSWORD, HK_HOST, HK_PORT, HK_DATABASE } = process.env;
 
 const sequelize = new Sequelize(
-  `postgres://${HK_USER}:${HK_PASSWORD}@${HK_HOST}:${HK_PORT}/${HK_DATABASE}`,
-  // `${DATABASE_URL}`,
+  // `postgres://${HK_USER}:${HK_PASSWORD}@${HK_HOST}:${HK_PORT}/${HK_DATABASE}`,
+  "postgres://ontufujhoikeke:b161794960a6904bb02167f40939f241fd58573730a90d674bb07886a0300759@ec2-34-203-114-67.compute-1.amazonaws.com:5432/d7heuuttb3str5",
 
   // `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-    define: {
-      timestamps: false, //to omit createdAt and updatedAt columns when defining models
-    },
+    // define: {
+    //   timestamps: false, //to omit createdAt and updatedAt columns when defining models
+    // },
     dialectOptions: {
       ssl: {
         rejectUnauthorized: false,
