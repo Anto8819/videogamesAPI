@@ -11,8 +11,8 @@ const { mapGenresApiDB } = require("./controller/genreController");
 const { HK_USER, HK_PASSWORD, HK_HOST, HK_PORT, HK_DATABASE } = process.env;
 
 const sequelize = new Sequelize(
-  // `postgres://${HK_USER}:${HK_PASSWORD}@${HK_HOST}:${HK_PORT}/${HK_DATABASE}`,
-  `${DATABASE_URL}`,
+  `postgres://${HK_USER}:${HK_PASSWORD}@${HK_HOST}:${HK_PORT}/${HK_DATABASE}`,
+  // `${DATABASE_URL}`,
 
   // `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`,
   {
