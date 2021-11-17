@@ -8,11 +8,11 @@ const { mapGenresApiDB } = require("./controller/genreController");
 //   DB_USER, DB_PASSWORD, DB_HOST,
 // } = process.env;
 
-const { HK_USER, HK_PASSWORD, HK_HOST, HK_PORT, HK_DATABASE } = process.env;
+// const { HK_USER, HK_PASSWORD, HK_HOST, HK_PORT, HK_DATABASE } = process.env;
 
 const sequelize = new Sequelize(
+  process.env.DATABASE_URL,
   // `postgres://${HK_USER}:${HK_PASSWORD}@${HK_HOST}:${HK_PORT}/${HK_DATABASE}`,
-  "postgres://ontufujhoikeke:b161794960a6904bb02167f40939f241fd58573730a90d674bb07886a0300759@ec2-34-203-114-67.compute-1.amazonaws.com:5432/d7heuuttb3str5",
 
   // `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`,
   {

@@ -30,6 +30,8 @@ const port = process.env.PORT || 3001;
 //   });
 // });
 
-server.listen(port, async () => {
-  console.log("%s listening on port", port);
+conn.sync({ force: true }).then(() => {
+  server.listen(port, async () => {
+    console.log("%s listening on port", port);
+  });
 });
